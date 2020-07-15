@@ -9,7 +9,11 @@ function App() {
     <div className="App">
       {/* <Hooks /> */}
       {/* <ThemeChanger /> */}
-      {/* <RenderProp /> */}
+      <RenderProp render={(theme, toggleFn) => (
+        <div className={theme} >
+          <button className='toggleButton' onClick={toggleFn}>{theme}</button>
+        </div>
+      )} />
     </div>
   );
 }
